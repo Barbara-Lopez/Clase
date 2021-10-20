@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    width: 20%;
+    background: yellow;    
+    flex-direction: row-reverse;
+
+}
+.item{
+    background-color: blue;
+    color:white;
+
+}
+
+.container2{
+    display: flex;
+    width: 20%;
+    background: yellow;
+    flex-direction: column;
+}
+.item2{
+    background-color: blue;
+    
+    color:white;
+    
+}
