@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+
+}
+article{
+    order: 2;
+}
+nav{
+    order: 1;
+}
+aside{
+    order: 3;
+}
+

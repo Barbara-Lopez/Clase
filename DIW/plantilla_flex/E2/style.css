@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: o;
+}
+nav{
+    width: 20%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: space-between;
+}
+ul li p{
+    margin: .5em;
+}
+ul li a{
+    text-decoration: none;
+    margin: .5em;
+    padding: .5em;
+    background-color: whitesmoke;
+    
+}

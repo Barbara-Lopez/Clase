@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+
+main{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
+img{
+    width: 100%;
+}
