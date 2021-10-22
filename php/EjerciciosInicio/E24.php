@@ -1,13 +1,11 @@
 
 <html>
     <head>
-        <title>Ejercicio 11</title>
+        <title>Ejercicio 24</title>
     </head>
     <body>
         <?php 
-           
-            
-
+          
         ?>
     </body>
 </html>
