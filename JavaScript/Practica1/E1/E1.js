@@ -1,6 +1,7 @@
 
 let numEnlaces=Array.from(document.getElementsByClassName("enlace"));
-let enlacesPrueba=numEnlaces.find(e=>e.href=="http://prueba");
+expresion=new RegExp("http://prueba");
+let enlacesPrueba=Array.from(numEnlaces.filter(e=>expresion.test(e.href)));
 
 let parrafo1=document.createElement("p");
 let contenido1=document.createTextNode("El numero de enlaces es: "+numEnlaces.length);
@@ -17,4 +18,4 @@ let contenido3=document.createTextNode("La cantidad de enlaces a http://prueba e
 parrafo3.appendChild(contenido3);
 document.body.appendChild(parrafo3);
 
- 
+
