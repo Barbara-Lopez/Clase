@@ -29,10 +29,20 @@
             ];
             $user=$_GET["user"];
             $passwd=$_GET["passwd"];
-            if(array_key_exists($user,$usuarios))
+            if(array_key_exists($user,$usuarios)){
                 echo "El usuario existe";
+                validarContraseña($user,$passwd,$usuarios);
+            }
             else
                 echo "El usuario no existe";
+            
+            function validarContraseña($user,$passwd,$usuarios){
+                if($passwd==$usuarios["$user"]["passwd"]){
+                    echo "La contraseña es correcta";
+                }else
+                    echo "La contraseña es incorrecta";
+
+            }
         ?>
     </body>
 </html>

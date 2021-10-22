@@ -5,7 +5,11 @@
     </head>
     <body>
         <?php 
-          
+            $dia=$_GET["dia"];
+            switch($dia){
+                case;
+            }
+
         ?>
     </body>
 </html>
