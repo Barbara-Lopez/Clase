@@ -2,17 +2,32 @@
     margin: 0;
     padding: 0;
 }
+header{
+    text-align: center;
+    background-color: lightslategrey;
+
+}
 main{
     display: flex;
-
+    height: 200px;
 }
 article{
     order: 2;
+    flex-grow: 2;
+    background-color: gray;
 }
 nav{
     order: 1;
+    flex-grow: 1;
+    background-color: lightgrey;
 }
 aside{
     order: 3;
+    flex-grow: 1;
+    background-color: lightgrey;
 }
 
+footer{
+    text-align: center;
+    background-color: lightslategrey;
+}
