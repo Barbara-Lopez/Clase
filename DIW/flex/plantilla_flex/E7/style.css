@@ -10,7 +10,7 @@ body{
 }
 header{
     background-color: salmon ;
-
+   
     color:white;
     display: flex;
 	justify-content: center;
@@ -28,13 +28,14 @@ nav ul{
 	display: flex;
 	padding: 1em;
 }
-nav ul li{
+nav ul li{ 
+    color: white;
 	padding: 0 1em;
 }
 .centro{
     display: flex;
     flex-direction: row;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 }
 aside{
 	width: 30%;
@@ -44,21 +45,34 @@ aside{
     background-color: lightgray;
     padding: 1em;
 }
+aside>*{
+    margin-bottom: .5em;
+}
 main{
 	width: 70%;
     display: flex;
     flex-direction: column;
     margin-right: 1em;
+    padding-bottom: .5em;
 }
+article{
+	border-bottom: 1px solid grey;
 
+}
+article > *{
+	padding: .5em 0;
+}
 img{
 	width: 100%;
 }
 
 footer{
     position: fixed;
-   
+    bottom: 0;
+    height: 4em;
     background-color: grey ;
     width: 100%;
     text-align: center;
+    padding: 1em 0;
+    font-weight: bold;
 }
