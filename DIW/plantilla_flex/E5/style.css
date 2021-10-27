@@ -1,11 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 header{
     text-align: center;
     background-color: lightslategrey;
-
+    height: 100%;
 }
 main{
     display: flex;

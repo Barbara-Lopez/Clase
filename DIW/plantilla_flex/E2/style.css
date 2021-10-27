@@ -1,9 +1,12 @@
 *{
     padding: 0;
-    margin: o;
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
 }
 nav{
-    width: 20%;
+    margin: 5em;
+    width: 30%;
 }
 ul{
     display: flex;
@@ -15,6 +18,7 @@ ul li{
     background-color: lightgray;
     align-items: center;
     justify-content: space-between;
+    margin: .5em;
 }
 ul li p{
     margin: .5em;
