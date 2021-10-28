@@ -5,6 +5,7 @@ html * {
 
 html, body {
     height: 100%;
+
 }
 
 body {
@@ -17,6 +18,9 @@ body {
 /* Principal */
 .principal {
     height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
 }
 
 /* Cabecera */
@@ -42,19 +46,29 @@ body {
 /* Anexos */
 .anexo1 {
     background-color: goldenrod;
+
 }
 
 .anexo2 {
     background-color: darkcyan;
+
 }
 
 /* Derecha */
 .derecha {
     background-color: bisque;
+
 }
 
 /* Pie */
 .pie {
     background-color: black;
     color: white;
+
+}
+
+
+
+@media screen {
+    
 }
