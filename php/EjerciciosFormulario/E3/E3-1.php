@@ -13,13 +13,13 @@
         
         <?php
             require 'E3-2.php';
-            $resultado=operacion($numero);
-            echo "<p>Último resultado: $resultado</p>";
+            $resultado=buscarNumero($numero);
+            echo "<p>El numero aparece $resultado veces en el array</p>";
         ?>
         
         <form action="E3-1.php" method="get" name="formulario">
-            <label for="num">Primer numero:</label>
-            <input type="number" name="num" id="num"/> <br/>
+            <label for="numero">Primer numero:</label>
+            <input type="number" name="numero" id="numero"/> <br/>
             
             <input type="submit" value="¡Probar suerte!">
         </form>
