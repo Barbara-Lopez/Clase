@@ -13,9 +13,10 @@
         <p>Solución:</p>
         
         <?php
-            
-            $resultado=confirmarUsuaroContraseña($usuario,$contraseña);
-            echo "$resultado";
+            if(isset($usuario) && isset($contraseña)){
+                $resultado=confirmarUsuarioContraseña($usuario,$contraseña,$usuarios);
+                echo $resultado;
+            }
         ?>
         
         <form action="E4-2.php" method="get" name="formulario">
