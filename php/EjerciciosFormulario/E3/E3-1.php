@@ -9,7 +9,6 @@
         la aplicación comprobará cuántas veces aparece el número introducido en el array.
         Pista: Las funciones implote() y explode() pueden ser de gran utilidad.</p>
         <p>Solución:</p>
-        <h3>Calculadora</h3>
         
         <?php
             require 'E3-2.php';

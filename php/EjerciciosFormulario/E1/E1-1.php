@@ -9,7 +9,6 @@
         mostrará el resultado de la conversión realizada. El formulario siempre se mostrará,
         de forma que el usuario pueda seguir introduciendo valores.</p>
         <p>Solución:</p>
-        <h3>Calculadora</h3>
         
         <?php
             require 'E1-2.php';
