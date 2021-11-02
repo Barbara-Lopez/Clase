@@ -1,7 +1,7 @@
 
 <html>
     <head>
-        <title>Ejercicio 1</title>
+        <title>Ejercicio 2</title>
     </head>
     <body>
         <p>02.Añade a la aplicación anterior un boton o enlace para borrar la cookie de nombre usuario.</p>
