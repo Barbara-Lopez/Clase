@@ -19,7 +19,7 @@
             if(!confirmarUsuario($usuario,$usuarios)){
                 echo "<p>Usuario incorrecto</p>";
             }else{
-                if(isset($contraseña)){
+                if(isset($contrasena)){
                     if(!confirmarContrasena($usuario,$contrasena,$usuarios)) {
                         echo "<p>Contraseña incorrecta</p>";
                     }else{
