@@ -9,6 +9,7 @@
             nombre de la persona y asi añadir personas a la lista. la lista se almacenara en sesión, y existira un boton que borre la ista completa.
         </p>
         <p>Solución:</p>
+        <h3>Lista de asistencia:</h3>
         <ul>
             <?php
                 añadirLista($boton,$nombre);

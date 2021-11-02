@@ -9,9 +9,9 @@
     $boton=cogerBoton();
     function añadirLista($boton,$nombre){
         if($boton=="Guardar")
-        guardarSesion($nombre);
+            guardarSesion($nombre);
         elseif($boton=="vaciar"){
-
+            session_unset();
         }
         else
             visualizarLista();
