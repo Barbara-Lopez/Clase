@@ -16,21 +16,40 @@ body {
 }
 
 /* Principal */
+.principal > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
 .principal {
     height: 100vh;
+    width: 100vw;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
+    grid-template-rows: 2fr 1fr 10fr 2fr 2fr 1fr 1fr;
+    grid-template-areas:
+    "cabecera"
+    "izquierda"
+    "contenido"
+    "anexo1"
+    "anexo2"
+    "derecha"
+    "pie";
 }
 
 /* Cabecera */
 .cabecera {
     background-color: aquamarine;
+    grid-area: cabecera;
+    text-align: center;
 }
 
 /* Contenido */
 .contenido {
     background-color: aliceblue;
+    grid-area: contenido;
+    flex-direction: column;
 }
 
 .contenido__img {
@@ -41,34 +60,61 @@ body {
 /* Izquierda */
 .izquierda {
     background-color: beige;
+    grid-area: izquierda;
+    text-align: center;
 }
 
 /* Anexos */
 .anexo1 {
     background-color: goldenrod;
+    grid-area: anexo1;
 
 }
 
 .anexo2 {
     background-color: darkcyan;
-
+    grid-area: anexo2;
 }
 
 /* Derecha */
 .derecha {
     background-color: bisque;
-
+    grid-area: derecha;
+    text-align: center;
 }
 
 /* Pie */
 .pie {
     background-color: black;
     color: white;
+    grid-area: pie;
 
 }
 
 
 
-@media screen {
+@media screen and (min-width:600px) {
+    .principal{
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 2fr 9fr 4fr 1fr;
+        grid-template-areas:
+        "cabecera cabecera cabecera "
+        "izquierda contenido contenido "
+        "derecha anexo1 anexo2 "
+        "pie pie pie ";
+    }
+    
+}
+
+@media (min-width:900px){
+    .principal{
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-template-rows: 2fr auto 3fr 1fr;
+        grid-template-areas:
+        "cabecera cabecera cabecera cabecera"
+        "izquierda contenido contenido derecha"
+        "izquierda anexo1 anexo2 derecha"
+        "pie pie pie pie";
+    }
     
 }

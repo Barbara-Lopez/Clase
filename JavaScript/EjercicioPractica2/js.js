@@ -1,10 +1,14 @@
 window.onload = function() {
     let numeros=crearNumAleatorios();
-   
-    let botones=document.getElementsByTagName("button");
-    for (x in numeros) {
-        let num= numero[x].toString();
-        botones[x]=num;
+
+    alert(numeros.length+" "+numeros[0]+" "+numeros[1]);
+    
+    for (i in numeros) {
+        alert(numeros[i]);
+        let boton=document.createElement("button");
+        let num=document.createTextNode(numero[i]);
+        boton.appendChild(num);
+        document.body.appendChild(boton);
     }
 
 
@@ -13,15 +17,18 @@ window.onload = function() {
 
 function crearNumAleatorios(){
     let numeros=[];
-    repe="no";
-    x=0
+
     for(x=0;x<10;x++){
         let num = Math.round(Math.random()*10);
-        for (y in numeros) {
-            if (y==num) {
-                repe="si";
+        repe="no";
+        if(numeros.leng>0){
+            for (y in numeros) {
+                if (y==num) {
+                    repe="si"; 
+                    break;
+                }
+            
             }
-            break;
         }
         if(repe=="no"){
             numeros.push(num);
