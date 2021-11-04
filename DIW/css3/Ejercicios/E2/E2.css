@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.contenedor div{
+    margin: 2em;
+    text-align: center;
+    padding: 2em 6em;
+    background-color: lightgray;
+}
+#a{
+    border-bottom-right-radius: 40% 60%;
+}
+#b{
+    border-bottom-right-radius: 30% 35%;
+}
+#c{
+    border-bottom-right-radius: 20% 80%;
+}
+#d{
+    border-bottom-right-radius: 10% 20%;
+    border-top-right-radius: 30% 80%;
+    border-bottom-left-radius: 30% 80%;
+    border-top-left-radius: 10% 20%;
+}
+#e{
+    
+}
+#f{
+    border-radius: 50%;
+   
+
