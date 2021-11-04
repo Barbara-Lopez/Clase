@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+section{
+    background-color: #DFDFDF;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 2em;
+}
+h1{
+    color: #4682B4;
+    border-bottom: 1px solid white;
+    padding:0 3em ;
+}
+li{
+    list-style: none;
+}
+
+section>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section .types{
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.nth-of-type div, .nth-of-type li{
+    border:1px solid black;
+    margin: .2em;
+    padding: .2em;
+}
+
+.nth-child li{
+    padding-left: 1.5em;
+    margin: .7em;
+
+    
+}
+.UI{
+    margin-top: 3em;
+}
+.UI h1{
+    padding: 0 10em;
+}
+
+.UI input[type="text"], .UI input[type="email"]{
+    width: 100%;
+    border-color: steelblue;
+    margin: .5em 0;
+    padding: .2em  .2em .3em;
+}
+
+.UI label{
+    color: steelblue;
+}
+.UI input[type="submit"]{
+    background-color: steelblue;
+    padding: .5em 4em;
+    color: white;
+    border: 1px solid white;
+}
+textarea{
+    border: 2px solid steelblue;
+    margin: 1em 0;
+}
