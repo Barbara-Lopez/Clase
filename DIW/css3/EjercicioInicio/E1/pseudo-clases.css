@@ -14,6 +14,8 @@ h1{
     color: #4682B4;
     border-bottom: 1px solid white;
     padding:0 3em ;
+    margin-bottom: .5em;
+	text-align: center;
 }
 li{
     list-style: none;
@@ -44,11 +46,18 @@ section .types{
 }
 .UI{
     margin-top: 3em;
+    
 }
 .UI h1{
     padding: 0 10em;
 }
-
+.UI form div:nth-child(2){
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+form input[type="radio"] + label{
+	color: steelblue;
+}
 .UI input[type="text"], .UI input[type="email"]{
     width: 100%;
     border-color: steelblue;
@@ -68,4 +77,50 @@ section .types{
 textarea{
     border: 2px solid steelblue;
     margin: 1em 0;
+}
+/* Parte 3 */
+.nth-of-type div:nth-of-type(2n+1){
+	background-color: orange;
+	color: white;
+	font-size: 2em;
+}
+.nth-of-type li:nth-of-type(2n+1){
+	background-color: blue;
+	color: white;
+	font-size: 2em;
+}
+strong{
+	color: red;
+	font-size: 2em;
+}
+/* Parte 4 */
+.nth-child li:nth-child(2n+1){
+	background-color: green;
+	color: white;
+}
+.nth-child li:nth-child(2n){
+	background-color: red;
+	color: white;
+}
+/* Parte 5 */
+form :disabled{
+	background-color: #666;
+	cursor: no-drop;
+}
+
+form input[type="email"]:enabled{
+	background-color: yellow;
+	color: green;
+}
+
+form input[type="radio"]:checked + label{
+	font-weight: bold;
+	color: black;
+	border: 1px solid steelblue;
+}
+
+form input[type="submit"]:hover{
+	color: steelblue;
+	background-color: white;
+	border-color: steelblue;
 }

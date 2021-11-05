@@ -13,3 +13,41 @@ h1{
     padding-bottom: .3em;
     text-align:center;
 }
+
+section div{
+    margin-top: 1em;
+	border-bottom: 1px solid white;
+	
+}
+section h3{
+	margin-top: 1em;
+}
+
+.ie::before{
+	content: url(images/ie.png);
+}
+.ie::after{
+	content: attr(title);
+	color: red;
+}
+.chrome::before{
+	content: url(images/chrome.png);
+}
+.chrome::after{
+	content: attr(title);
+	color: red;
+}
+.firefox::before{
+	content: url(images/firefox.png);
+}
+.firefox::after{
+	content: attr(title);
+	color: red;
+}
+h3::after, h3::before{
+	content: attr(title);
+	background-color: red;
+	border-radius: 1.5em;
+	margin: 0 1em;
+	padding: .5em;
+}
