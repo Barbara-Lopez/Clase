@@ -9,7 +9,7 @@ window.onload = function() {
         attValue=document.createAttribute("value");
         attValue.value=numeros[i];
         boton.setAttributeNode(attValue);
-        attName=document.createAttribute("name");
+        attName=document.createAttribute("class");
         attName.value="tecladoNumerico";
         boton.setAttributeNode(attName);
         document.body.appendChild(boton);
@@ -18,20 +18,24 @@ window.onload = function() {
             document.body.appendChild(tabulador);
         }
     }
-    
+    llenarClave();
 }
 
 function llenarClave(){
-    let botones=document.getElementsByName("tecladoNumerico");
-    for (i in botones) {
-        botones[i].addEventListener("click",ponerClave);
+    let botones=document.getElementsByClassName("tecladoNumerico");
+    for(x=0;x<botones.length;x++){
+        botones[x].addEventListener("click",ponerClave,false);
     }
-}
- 
+
+    // botones.forEach(element => element.addEventListener("click",ponerClave,false));
+    // for (i in botones) { botones[i].addEventListener("click",ponerClave,false);}
+};
+
 function ponerClave(){
-    let clave= this.value;
-    alert(clave);
-            
+    let clave=this.value;
+    tClave=document.getElementById("clave");
+    tClave.value=tClave.value+clave;
+    
 };
 
 function crearNumAleatorios(){
@@ -50,7 +54,41 @@ function crearNumAleatorios(){
             numeros[x]=num;
         }
     }
-  
     return numeros;
+}
+
+function Persona(){
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.user=User;
+    this.movimientosBancarios=MovimientoBancario;
+}
+function User(){
+    this.nombre=nombre;
+    this.contraseña=contraseña;
+}
+function MovimientoBancario(){
+    this.fecha=fecha;
+    this.concepto=concepto;
+    this.importe=importe;
+    this.saldo=saldo;
+}
+personas=[];
+users=[];
+movimientosBancarios=[];
+llenarDatos();
+function llenarDatos(){
+    user= new User("11111111E",123456);
+    dia =new Date(2000,2,12);
+    movimiento= new MovimientoBancario(dia,"Gasto casa",100,5000);
+    movimiento1=new MovimientoBancario(dia,"Ingreso casa",50,4950);
+    movimiento2= new MovimientoBancario(dia,"Gasto coche",50,5000); 
+    movimientosBancarios.push(movimiento,movimiento1,movimiento2);
+    persona= new Persona("Maria","Lopez",user,movimientosBancarios);
+    Personas.push(persona);
+}
+/*
+function verificarUsuario(){
 
 }
+*/
