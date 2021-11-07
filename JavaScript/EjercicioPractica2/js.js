@@ -19,6 +19,7 @@ window.onload = function() {
         }
     }
     llenarClave();
+    verificarUsuario();
 }
 
 function llenarClave(){
@@ -44,6 +45,7 @@ function crearNumAleatorios(){
     while(numeros.length<cant){
         let num = Math.round(Math.random()*(cant-1));
         let repe="no";
+        //for (i in botones){
         for(x=0;x<numeros.length;x++){
             if(numeros[x]==num){
                 repe="si"; 
@@ -64,7 +66,7 @@ function Persona(){
     this.movimientosBancarios=MovimientoBancario;
 }
 function User(){
-    this.nombre=nombre;
+    this.nif=nif;
     this.contraseña=contraseña;
 }
 function MovimientoBancario(){
@@ -87,8 +89,29 @@ function llenarDatos(){
     persona= new Persona("Maria","Lopez",user,movimientosBancarios);
     Personas.push(persona);
 }
-/*
+
 function verificarUsuario(){
+    let bEnviar=document.getElementById("enviar");
+    bEnviar.addEventListener("click",verificarDatos,false);
 
 }
-*/
+function verificarDatos(){
+    try {
+        let nif=document.getElementById("nif");
+        let clave=document.getElementById("clave");
+        let persona=personas.find(p => p.user[0] == nif && p.user[1] == clave);
+        if (persona == undefined){        
+            nif.value="";
+            clave.value="";
+            throw "Nif o contraseña incorrecta";
+        }else
+            window.location="movimientosBancarios.html";
+
+    } catch (error) {
+        alert(error);
+    }
+   
+}
+
+
+ 
