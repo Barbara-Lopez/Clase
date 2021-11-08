@@ -18,6 +18,6 @@
             <input type="text" name="nombre" id="nombre">
             <input type="submit" name="boton" value="Guardar">
         </form>
-        <a href="E4.php?boton=vaciar">Vaciar lista</a>
+        <a href="E1.php?boton=vaciar">Vaciar lista</a>
     </body>
 </html>
