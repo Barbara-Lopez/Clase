@@ -1,3 +1,5 @@
+
+
 window.onload = function() {
     let numeros=crearNumAleatorios();
 
@@ -59,47 +61,20 @@ function crearNumAleatorios(){
     return numeros;
 }
 
-function Persona(){
-    this.nombre=nombre;
-    this.apellido=apellido;
-    this.user=User;
-    this.movimientosBancarios=MovimientoBancario;
-}
-function User(){
-    this.nif=nif;
-    this.contraseña=contraseña;
-}
-function MovimientoBancario(){
-    this.fecha=fecha;
-    this.concepto=concepto;
-    this.importe=importe;
-    this.saldo=saldo;
-}
-personas=[];
-users=[];
-movimientosBancarios=[];
-llenarDatos();
-function llenarDatos(){
-    user= new User("11111111E",123456);
-    dia =new Date(2000,2,12);
-    movimiento= new MovimientoBancario(dia,"Gasto casa",100,5000);
-    movimiento1=new MovimientoBancario(dia,"Ingreso casa",50,4950);
-    movimiento2= new MovimientoBancario(dia,"Gasto coche",50,5000); 
-    movimientosBancarios.push(movimiento,movimiento1,movimiento2);
-    persona= new Persona("Maria","Lopez",user,movimientosBancarios);
-    Personas.push(persona);
-}
+personas=llenarDatos();
 
 function verificarUsuario(){
+    
     let bEnviar=document.getElementById("enviar");
     bEnviar.addEventListener("click",verificarDatos,false);
 
 }
 function verificarDatos(){
     try {
-        let nif=document.getElementById("nif");
-        let clave=document.getElementById("clave");
-        let persona=personas.find(p => p.user[0] == nif && p.user[1] == clave);
+        
+        let nif=document.getElementById("nif").value;
+        let clave=document.getElementById("clave").value;
+        let persona=personas.find(p => p.user.nif == nif && p.user.contrasena == clave);
         if (persona == undefined){        
             nif.value="";
             clave.value="";
