@@ -1,5 +1,6 @@
 <?php 
 
+
 function connect(){
     try {
         # MySQL
@@ -16,15 +17,53 @@ $dbh=connect();
 $nombre=cogerNombre();
 $boton=cogerBoton();
 
-function añadirLista($boton,$nombre){
-    if($boton=="Guardar")
-        guardarSesion($nombre);
-    elseif($boton=="vaciar"){
-        session_unset();
+function añadirLista($boton,$nombre,$dbh){
+    if($boton=="Guardar"){
+        
+        guardarNombre($nombre,$dbh);
     }
-    else
-        visualizarLista();
+    elseif($boton=="vaciar"){
+        $stmt= $dbh->prepare("DELETE FROM prueba1");
+        $stmt->execute();
+    }
+    elseif($boton=="vaciarUno"){
+        eliminarUno($dbh);
+        visualizarLista($dbh);
+    }
+    else{
+        visualizarLista($dbh);
+    }
 }
+
+function guardarNombre($nombre,$dbh){
+    if(isset($nombre)){
+        $stmt= $dbh->prepare("INSERT INTO prueba1 (nombre) VALUES ('$nombre')");
+        $stmt->execute();
+        visualizarLista($dbh);
+    }
+  
+}
+
+function visualizarLista($dbh){
+    $stmt= $dbh->prepare("SELECT nombre FROM prueba1");
+    $stmt->execute();
+    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    crearLista($resultado);
+}
+
+function crearLista($resultado){
+    foreach ($resultado as $row){
+        $nombre=$row["nombre"];
+        echo "<li>".$nombre." (<a href='E1.php?boton=vaciarUno&id=$nombre'>Eliminar</a>) </li>";
+    };
+}
+
+function eliminarUno($dbh){
+    $id=$_GET["id"];
+    $stmt= $dbh->prepare("DELETE  FROM prueba1 where nombre='$id'");
+    $stmt->execute();
+}
+
 function cogerNombre(){
     if(isset($_GET["nombre"])){
         $nombre=$_GET["nombre"];
@@ -41,9 +80,5 @@ function cogerBoton(){
     else
         return "";
 }
-/*$data=['nombre'=>'pepe'];
 
-$stmt= $dbh->prepare("
-INSERT INTO prueba1(nombre)
-values (:nombre)" );
-$stmt->execute($data);*/
+require 'E1-view.php';
