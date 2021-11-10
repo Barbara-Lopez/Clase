@@ -7,5 +7,5 @@ personas=llenarDatos();
 
 function mostrarMovimientos(){
     let cookie=document.cookie.split('=');
-    let nif=cookie[1]
+    let nif=cookie[1];
 }
