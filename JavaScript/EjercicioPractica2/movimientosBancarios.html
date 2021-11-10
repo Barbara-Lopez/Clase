@@ -5,12 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Movimientos</title>
-        <script src="datos.js"></script>
+        <script src="js/datos.js"></script>
+        <script src="js/movimientos.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         
-       
-       
+        <h3>¿Como quiere los datos?</h3>
+        <form action="" method="post">
+            <label for="fecha">Ordenados por fecha</label>
+            <input type="radio" name="orden" id="fecha" checked="checked">
+            <label for="ingreso">Ordenados por ingreso</label>
+            <input type="radio" name="orden" id="ingreso">
+            <input type="button" value="Aceptar" id="aceptar">
+        </form>
           
         
         

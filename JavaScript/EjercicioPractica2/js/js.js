@@ -72,15 +72,18 @@ function verificarUsuario(){
 function verificarDatos(){
     try {
         
-        let nif=document.getElementById("nif").value;
-        let clave=document.getElementById("clave").value;
-        let persona=personas.find(p => p.user.nif == nif && p.user.contrasena == clave);
+        nif=document.getElementById("nif").value;
+        clave=document.getElementById("clave").value;
+        persona=personas.find(p => p.user.nif == nif && p.user.contrasena == clave);
         if (persona == undefined){        
             nif.value="";
             clave.value="";
             throw "Nif o contraseña incorrecta";
-        }else
+        }else{
+            document.cookie = "nif="+nif;
             window.location="movimientosBancarios.html";
+        }
+            
 
     } catch (error) {
         alert(error);
