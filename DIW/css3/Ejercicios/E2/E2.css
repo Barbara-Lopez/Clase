@@ -15,6 +15,10 @@
     padding: 2em 6em;
     background-color: lightgray;
 }
+.contenedor div#f{
+  
+    padding: 2em 3em;
+}
 #a{
     border-bottom-right-radius: 40% 60%;
 }
@@ -31,9 +35,12 @@
     border-top-left-radius: 10% 20%;
 }
 #e{
-    
+    border-bottom-right-radius: 30% 10%;
+    border-top-right-radius: 10% 20% ;
+    border-bottom-left-radius: 10% 30% ;
+    border-top-left-radius: 20% 10%  ;
 }
 #f{
     border-radius: 50%;
-   
+}
 

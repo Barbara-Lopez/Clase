@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 2%;
+    column-rule: 3px dotted red;
+}
