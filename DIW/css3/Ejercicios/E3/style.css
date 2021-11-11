@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 .contenedor{
-    width: 90%;
-    margin: 0 auto;
-    column-count: 3;
-    column-gap: 2%;
+	border-radius: 5px;
+	padding: 2%;
+	width: 95%;
+	column-count: 3;
+	column-gap: 2%;
+	column-rule: 3px dotted red;
+	background-color: darkgrey;
+}
+img{
+	margin: 2%;
+	max-width: 100%;
+	break-before: column;
     column-rule: 3px dotted red;
 }
