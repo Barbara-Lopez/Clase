@@ -26,11 +26,18 @@ function buscarPersona(nif){
 }
 function visualizarMovimientos(persona){
     let listaMovimientos=persona.movimientosBancarios;
+    if(document.getElementById("importe").checked){
+        listaMovimientos.sort();
+    }
+    else{
+        
+    }
 
-    listaMovimientos.sort();
     lista=""
     for (i in listaMovimientos.length) {
-        lista=lista+"La fecha es: "+listaMovimientos[i].fecha+" el concepto es: "+listaMovimientos[i].concepto+" el importe es: "+listaMovimientos[i].importe+" el saldo es: "+listaMovimientos[i].saldo+"\n"; 
+        let parrafo=document.createElement("p");
+        let texto=document.createTextNode(listaMovimientos[i].fecha+" el concepto es: "+listaMovimientos[i].concepto+" el importe es: "+listaMovimientos[i].importe+" el saldo es: "+listaMovimientos[i].saldo);
+        parrafo.appendChild(texto);
+        document.body.appendChild(parrafo);
     }
-    alert(lista);
 }
