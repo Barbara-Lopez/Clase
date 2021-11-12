@@ -26,11 +26,12 @@ function buscarPersona(nif){
 }
 function visualizarMovimientos(persona){
     let listaMovimientos=persona.movimientosBancarios;
+    modo=""
     if(document.getElementById("importe").checked){
-        listaMovimientos.sort();
+       listaMovimientos.sort(function(a,b){return a.importe - b.importe;});
     }
     else{
-        
+        listaMovimientos.sort(function(a,b){return a.fecha - b.fecha;});
     }
 
     lista=""
