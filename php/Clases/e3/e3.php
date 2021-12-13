@@ -1,25 +1,8 @@
 <?php
-class Poligono{
-    private $color,$altura,$anchura;
-    function getColor(){
-        return $this->color;
-    }
-    function getAltura(){
-        return $this->altura;
-    }
-    function getAnchura(){
-        return $this->anchura;
-    }
-    function setColor($color){
-        $this->color= $color;
-    }
-    function setAltura($altura){
-        $this->anchura= $altura;
-    }
-    function setAnchura($anchura){
-        $this->anchura= $anchura;
-    }
-}
+require_once 'poligono.php';
+require_once 'cuadrado.php';
+require_once 'triangulo.php';
 
-
-
+$cuadrado=new Cuadrado();
+$cuadrado->setAltura(5);
+echo $cuadrado->area();
