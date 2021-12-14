@@ -4,9 +4,10 @@ class Persona{
 
     public function __construct()
     {
-        self::$personasEnElMundo=self::$personasEnElMundo+1;
+        self::$personasEnElMundo++;
+        /*self::$personasEnElMundo=self::$personasEnElMundo+1;*/
     }
-    public function mostrar(){
+    public function getPersonasEnElMundo(){
         echo "La cantidad de personas es: ".self::$personasEnElMundo;
     }
 

@@ -5,4 +5,4 @@ $maria=new Persona();
 $marta=new Persona();
 $sonia=new Persona();
 $rebeca=new Persona();
-$rebeca->mostrar();
+echo "La cantidad de personas es: ".Persona::$personasEnElMundo;

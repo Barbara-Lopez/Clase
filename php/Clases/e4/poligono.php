@@ -1,27 +1,25 @@
 <?php
-class Poligono{
-    private $color,$altura,$anchura;
+abstract class Poligono{
+    protected $color,$altura,$anchura;
     public function getColor(){
         return $this->color;
     }
-    function getAltura(){
+    public function getAltura(){
         return $this->altura;
     }
-    function getAnchura(){
+    public function getAnchura(){
         return $this->anchura;
     }
-    function setColor($color){
+    public function setColor($color){
         $this->color= $color;
     }
-    function setAltura($altura){
+    public function setAltura($altura){
         $this->anchura= $altura;
     }
-    function setAnchura($anchura){
+    public function setAnchura($anchura){
         $this->anchura= $anchura;
     }
-    public abstract function area(){
-
-    }
+    abstract public function area();
 }
 
 

@@ -1,6 +1,6 @@
 <?php
 class Poligono{
-    private $color,$altura,$anchura;
+    protected $color,$altura,$anchura;
     public function getColor(){
         return $this->color;
     }
