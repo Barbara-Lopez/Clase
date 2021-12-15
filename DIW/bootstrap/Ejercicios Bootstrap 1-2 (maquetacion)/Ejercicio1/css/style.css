@@ -1,7 +1,8 @@
-body{
+.container{
 	text-align: center;
 	color:#FFF;
 }
+
 
 .header, .footer {
 	background: green;

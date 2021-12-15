@@ -45,7 +45,7 @@ function crearNumAleatorios(){
     let numeros=[];
     cant=10;
     while(numeros.length<cant){
-        let num = Math.round(Math.random()*(cant-1));
+        let num = Math.round(Math.random());
         let repe="no";
         //for (i in botones){
         for(x=0;x<numeros.length;x++){
