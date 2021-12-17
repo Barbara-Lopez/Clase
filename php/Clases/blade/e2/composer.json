@@ -1,0 +1,12 @@
+{
+    "name": "blade/e2",
+    "type": "project",
+    "require": {
+        "duncan3dc/blade": "^4.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blade\\E2\\": "src/"
+        }
+    }
+}

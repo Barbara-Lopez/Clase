@@ -74,16 +74,17 @@ class Persona{
     }
     esMayorDeEdad():boolean{
         var edad:number=parseInt(this.edad);
+        /*
         if(edad>=18){
             return true;
         }else{
             return false;
-        }
-
+        }*/
+        return edad >= 18;
     }
     comprobarSexo():void{
         var sexo:string=this.sexo;
-        if(sexo!="H" ){
+        if(sexo!="H"){
             if (sexo!="M" ) {
                 this.sexo="H"
             }
@@ -105,14 +106,14 @@ class Persona{
         var numero:string;
         const DIVISOR = 23;
         var numeroInt:number;
-        do{
-            for(var x:number=0;x<8;x++){
-                let num = Math.round(Math.random());
-                numero+=numero.toString();
-            }
-            numeroInt=parseInt(numero);
-            var resto: number = numeroInt / DIVISOR;
-        }while(resto!<arrayLetras.length);
+
+        for(var x:number=0;x<8;x++){
+            let num = Math.round(Math.random());
+            numero+=numero.toString();
+        }
+        var numeroInt:number=parseInt(numero);
+        var resto: number = numeroInt / DIVISOR;
+    
         
         numero+=arrayLetras[resto];
         this.dni=numero;
