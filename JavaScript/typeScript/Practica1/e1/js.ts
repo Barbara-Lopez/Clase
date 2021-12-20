@@ -11,7 +11,7 @@ function verificarDatos() {
         verificarAltura();
        
         crearPersona();
-    
+  
     } catch (error) {
         alert(error)
     }
@@ -19,7 +19,7 @@ function verificarDatos() {
 
 function verificarNombre()
 {
-    let nombre:string=String($("#nombre").val());
+    let nombre:string=$("#nombre").val().toString();
     var nombreEx=RegExp("^[A-Za-z]{4,}$");
 
     if(nombre==""){
@@ -37,7 +37,7 @@ function verificarEdad() {
         throw "La edad esta vacía"
     }
     if(!edadEx.test(edad)){
-        throw "La edad tiene que tener numeros"
+        throw "La edad tiene que tener 2 numeros"
     }
 }
 
