@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Blade\\E2\\": "src/"
+            "e2\\Models\\": "Models/"
         }
     }
 }

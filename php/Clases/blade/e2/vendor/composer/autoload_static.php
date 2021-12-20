@@ -19,6 +19,10 @@ class ComposerStaticInit4382a901b01ef593b942cb6de1e7ca2c
         array (
             'voku\\' => 5,
         ),
+        'e' => 
+        array (
+            'e2\\Models\\' => 10,
+        ),
         'd' => 
         array (
             'duncan3dc\\Laravel\\' => 18,
@@ -53,16 +57,16 @@ class ComposerStaticInit4382a901b01ef593b942cb6de1e7ca2c
         array (
             'Carbon\\' => 7,
         ),
-        'B' => 
-        array (
-            'Blade\\E2\\' => 9,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'e2\\Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Models',
         ),
         'duncan3dc\\Laravel\\' => 
         array (
@@ -127,10 +131,6 @@ class ComposerStaticInit4382a901b01ef593b942cb6de1e7ca2c
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-        'Blade\\E2\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

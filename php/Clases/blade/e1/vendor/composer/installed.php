@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6c98421d33fa096d8b430b599d26e5fa3419d837',
+        'reference' => '71d01747922b0142d9ce4d79d05b19689223a1b3',
         'name' => 'blade/e1',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6c98421d33fa096d8b430b599d26e5fa3419d837',
+            'reference' => '71d01747922b0142d9ce4d79d05b19689223a1b3',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(

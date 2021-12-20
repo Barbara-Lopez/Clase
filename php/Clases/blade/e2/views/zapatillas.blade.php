@@ -7,7 +7,7 @@
         <title>Ejercicio2</title>
     </head>
     <body>
-    <table border="1">
+    <table style="border: 1px solid black;">
         <tr>
             <td>Marca</td>
             <td>{{ $zapatilla->getMarca() }}</td>

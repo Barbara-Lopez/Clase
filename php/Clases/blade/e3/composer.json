@@ -1,0 +1,12 @@
+{
+    "name": "e3/models",
+    "type": "proyect",
+    "require": {
+        "duncan3dc/blade": "^4.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "e3\\Models\\": "Models/"
+        }
+    }
+}

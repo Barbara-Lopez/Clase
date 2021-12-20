@@ -1,5 +1,5 @@
 <?php
-namespace e2\models;
+namespace e2\Models;
 
 class Zapatilla{
     private $marca;
@@ -33,7 +33,7 @@ class Zapatilla{
         return $this->tipo;
     }
 
-    public function setTipo($tipo):void {
+    public function setTipo($tipo):void{
         $this->tipo = $tipo;
     }
 
