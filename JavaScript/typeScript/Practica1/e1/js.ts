@@ -1,3 +1,4 @@
+///<reference path="Persona.ts" />
 $(document).ready(function() {
     $("#finalizar").click(verificarDatos);
 });

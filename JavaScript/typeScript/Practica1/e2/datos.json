@@ -1,0 +1,27 @@
+{ "datos":
+    [
+    {"libro":[
+        {
+        "titulo":"Las olas",
+        "tipo":"",
+        "editorial":"",
+        "anyo":2000,
+        "aurtor":""
+        },
+        {
+        "titulo":"Los tres cerditos",
+        "tipo":"",
+        "editorial":"",
+        "anyo":1998,
+        "aurtor":""
+
+        }]
+    },      
+    {"aurtor":[
+        {"id":"","nombre":"","nacionalidad":"","fechaNacimiento":""},
+        {"nombre":"","nacionalidad":"","fechaNacimiento":""},
+        {"nombre":"","nacionalidad":"","fechaNacimiento":""}
+        ]
+    }
+    ]
+}

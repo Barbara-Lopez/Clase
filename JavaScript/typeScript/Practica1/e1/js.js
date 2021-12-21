@@ -1,3 +1,4 @@
+///<reference path="Persona.ts" />
 $(document).ready(function () {
     $("#finalizar").click(verificarDatos);
 });
@@ -15,7 +16,7 @@ function verificarDatos() {
     }
 }
 function verificarNombre() {
-    var nombre = String($("#nombre").val());
+    var nombre = $("#nombre").val().toString();
     var nombreEx = RegExp("^[A-Za-z]{4,}$");
     if (nombre == "") {
         throw "El nombre esta vacío";
@@ -31,7 +32,7 @@ function verificarEdad() {
         throw "La edad esta vacía";
     }
     if (!edadEx.test(edad)) {
-        throw "La edad tiene que tener numeros";
+        throw "La edad tiene que tener 2 numeros";
     }
 }
 function verificarSexo() {
