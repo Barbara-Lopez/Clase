@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Copias de libros</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="./ts/copias.js"></script>
+    </head>
+    <body>
+        <form action="">
+            <label for="titulo">Titulo del libro</label>
+            <input type="text" name="" id="titulo">
+            <label for="id">Id</label>
+            <input type="text" name="" id="id">
+            <label for="estado">Estado</label>
+            <select id="estado" >
+                <option value="prestado">Prestado</option>
+                <option value="retraso">Retraso</option>
+                <option value="biblioteca">Biblioteca</option>
+                <option value="reparacion">Reparacion</option>
+            </select>
+            <input type="button" value="Añadir" id="anadir">
+        </form>
+        <div id="listadoCopias">
+
+        </div>
+    </body>
+</html>

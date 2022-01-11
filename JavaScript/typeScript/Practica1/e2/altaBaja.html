@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alta y baja de libros</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="./ts/altaBaja.js"></script>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Libro</legend>
+                <label for="titulo">Titulo</label>
+                <input type="text" name="" id="titulo">
+                <label for="tipo">Tipo</label>
+                <select id="tipo" >
+                    <option value="novela">Novela</option>
+                    <option value="teatro">Teatro</option>
+                    <option value="poesia">Poesia</option>
+                    <option value="ensayo">Ensayo</option>
+                </select>
+                <label for="editorial">Editorial</label>
+                <input type="text" name="" id="editorial">
+                <label for="anno">Año</label>
+                <input type="text" name="" id="anno">
+            </fieldset>
+            <fieldset>
+                <legend>Autor</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="" id="nombre">
+                <label for="nacionalidad">Nacionalidad</label>
+                <input type="text" name="" id="nacionalidad">
+                <label for="fechaNac">Fecha de nacimiento</label>
+                <input type="text" name="" id="fechaNac" placeholder="01/01/2000">
+            </fieldset>
+            <input type="button" value="Añadir libro" id="anadir">
+        </form>
+       
+        <div id="listadoLibros">
+            <p style="color: orange;">Para eliminar un libro clique en el</p>
+        </div>
+    </body>
+</html>
