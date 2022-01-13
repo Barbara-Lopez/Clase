@@ -173,77 +173,74 @@
         </div>
       <!-- FORMULARIO -->
       <div class="row justify-content-center bg-primary">
-        <div class="col">
+        <div class="col-12">
           <p class="display-4 text-center text-white">CONTACTO</p>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-10">
-          <div class="row ">
-            <form class="col-12 col-md-8" action="">
-              <div class="row">
-                <div class="col-md-3 ">
-                  <label class="form-label" for="nombre">Nombre</label>
-                  <input class="form-control" type="text" name="" id="nombre">
-                </div>
-                <div class="col-md-3 ">
-                  <label class="form-label" for="apellido">Apellido</label>
-                  <input class="form-control" type="text" name="" id="apellido">
-                </div>
-                <div class="col-md-3 ">
-                  <div class="input-group mb-3">
-                    <label class="form-label" for="nombre">Username</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="prefijo">@</span>
-                      <input type="text" class="form-control" id="usuario">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-5 ">
-                  <label class="form-label" for="ciudad">Ciudad</label>
-                  <input class="form-control" type="text" name="" id="ciudad">
-                </div>
-                <div class="col-md-3 ">
-                  <label class="form-label" for="provincia">Provincia</label>
-                  <select class="form-select" id="provincia">
-                    <option selected disabled value="seleccionar">Selecciona...</option>
-                    <option selected value="alava">Álava</option>
-                    <option selected value="vizcaia">Vizcaia</option>
-                    <option selected value="guipuzcoa">Guipuzcoa</option>
-                  </select>
-                </div>
-                <div class="col-md-3 ">
-                  <label class="form-label" for="codigoPostal">Codigo Postal</label>
-                  <input class="form-control" type="text" name="" id="codigoPostal">
-                </div>
-                <div class="col-12">
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" value="condiciones" id="invalidCheck">
-                    <label class="form-check-label" for="invalidCheck">
-                      Acepto terminos y condiciones
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
 
-              </div>
-            </form>
-            
-            <div class="col-12  col-md-4 my-3">
-              <h3 class="bg-primary rounded p-2 text-white">Contacta con nosotros</h3>
-              <p>
-                Tú eres lo más importante para nosotros. Estaremos 24h al día disponibles
-                para solucionar cualquiera de tus dudas.
-              </p>
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6">
+          <form class="row my-3">
+            <div class="col-md-4">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
             </div>
-          </div>
+            <div class="col-md-4">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" required>
+            </div>
+            <div class="col-md-4">
+              <label for="usuario" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text" id="prefijo">@</span>
+                <input type="text" class="form-control" id="usuario">
+              </div>
+            </div>
+            <div class="row my-2"></div>
+            <div class="col-md-6">
+              <label for="ciudad" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="ciudad" required>
+            </div>
+            <div class="col-md-3">
+              <label for="provincia" class="form-label">Provincia</label>
+              <select class="form-select" id="provincia">
+                <option selected disabled value="seleccionar">Selecciona...</option>
+                <option selected value="alava">Álava</option>
+                <option selected value="vizcaia">Vizcaia</option>
+                <option selected value="guipuzcoa">Guipuzcoa</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="codigo" class="form-label">Codigo Postal</label>
+              <input type="text" class="form-control" id="vcodigo" required>
+            </div>
+            <div class="row my-2"></div>
+            <div class="col-12">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" value="condiciones" id="invalidCheck">
+                <label class="form-check-label" for="invalidCheck">
+                  Acepto terminos y condiciones
+                </label>
+              </div>
+            </div>
+            <div class="row my-2"></div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>     
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 my-3">
+          <h3 class="bg-primary rounded p-2 text-white">Contacta con nosotros</h3>
+          <p>
+            Tú eres lo más importante para nosotros. Estaremos 24h al día disponibles
+            para solucionar cualquiera de tus dudas.
+          </p>
         </div>
       </div>
-
+    
       <!-- PIE -->
-      <div class="row bg-primary justify-content-center pY-3">
+      <div class="row bg-primary justify-content-center py-1">
         <div class="col-2 col-md-1">
           <img src="img/twitter.png" class="img-fluid" />
         </div>
