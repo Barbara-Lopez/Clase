@@ -5,23 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 1</title>
+        <script src="js.js"></script>
     </head>
     <body>
-        <script>
-            class HolaMundo extends HTMLElement{
-                constructor(){
-                    super();
-                }
-                connectedCallback(){
-                    this.innerHTML= '<p onclick="visualizarAlert()">Hola Mundo</p>'
-                }
-            }
-
-            function visualizarAlert() {
-                alert("Hola mundo");
-            }
-            window.customElements.define('hola-mundo', HolaMundo)
-        </script>
+        
         <hola-mundo></hola-mundo>
     </body>
 </html>
