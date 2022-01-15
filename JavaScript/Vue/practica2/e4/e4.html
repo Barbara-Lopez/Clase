@@ -5,10 +5,78 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 4</title>
-        <script src="js.js"></script>
     </head>
     <body>
- 
+        <!-- Fecha que nosotros queramos con el formato especificado en el componente creado -->
+        <script>
+            class TimeFormatted1 extends HTMLElement { // (1)
+            
+                connectedCallback() {
+                    let date = new Date(this.getAttribute('datetime') || Date.now());
+                
+                    this.innerHTML = new Intl.DateTimeFormat("default", {
+                        year: this.getAttribute('year') || undefined,
+                        month: this.getAttribute('month') || undefined,
+                        day: this.getAttribute('day') || undefined,
+                        hour: this.getAttribute('hour') || undefined,
+                        minute: this.getAttribute('minute') || undefined,
+                        second: this.getAttribute('second') || undefined,
+                        timeZoneName: this.getAttribute('time-zone-name') || undefined,
+                    }).format(date);
+                }
+            
+            }
+            
+            customElements.define("time-formatted1", TimeFormatted1); // (2)
+        </script>
+        <h1>La fecha 2019-01-01 en formato: </h1>
+        <time-formatted1 datetime="2019-01-01" year="numeric" month="long" day="numeric"
+        hour="numeric" minute="numeric" second="numeric"
+        time-zone-name="short"></time-formatted1>
+
+        <!-- Hora actual con segundero cambiante -->
+        <script>
+            class TimeFormatted2 extends HTMLElement {
+            
+                render() { // (1)
+                    let date = new Date(this.getAttribute('datetime') || Date.now());
+                
+                    this.innerHTML = new Intl.DateTimeFormat("default", {
+                        year: this.getAttribute('year') || undefined,
+                        month: this.getAttribute('month') || undefined,
+                        day: this.getAttribute('day') || undefined,
+                        hour: this.getAttribute('hour') || undefined,
+                        minute: this.getAttribute('minute') || undefined,
+                        second: this.getAttribute('second') || undefined,
+                        timeZoneName: this.getAttribute('time-zone-name') || undefined,
+                    }).format(date);
+                }
+            
+                connectedCallback() { // (2)
+                    if (!this.rendered) {
+                        this.render();
+                        this.rendered = true;
+                    }
+                }
+            
+                static get observedAttributes() { // (3)
+                    return ['datetime', 'year', 'month', 'day', 'hour', 'minute', 'second', 'time-zone-name'];
+                }
+            
+                attributeChangedCallback(name, oldValue, newValue) { // (4)
+                    this.render();
+                }
+            
+            }
+            
+            customElements.define("time-formatted2", TimeFormatted2);
+        </script>
+        <h1>La hora actual es: </h1>
+        <time-formatted2 id="elem" hour="numeric" minute="numeric" second="numeric"></time-formatted2>
+        
+        <script>
+            setInterval(() => elem.setAttribute('datetime', new Date()), 1000); // (5)
+        </script>
         
     </body>
 </html>
