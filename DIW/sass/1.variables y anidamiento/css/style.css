@@ -1,0 +1,42 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #9b6f91;
+  padding: 0.2rem;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 0.3em;
+}
+nav ul li.active a {
+  color: #fff;
+  font-weight: bolder;
+}
+nav ul li a {
+  color: #333;
+}
+nav ul li a:hover {
+  color: #fff;
+}
+
+.card {
+  border: 0.1rem solid grey;
+  border-radius: 1rem;
+  text-align: center;
+  width: 25%;
+  display: inline-block;
+  padding: 0.5em;
+}
+.card img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.card figcaption {
+  margin-bottom: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

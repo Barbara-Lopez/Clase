@@ -1,0 +1,56 @@
+$blanco:#fff;
+$gris_oscuro:#333;
+$morado:rgb(155, 111, 145);
+$radio_pequeno:.2rem;
+$radio_normal:1rem;
+$radio_grande:2rem;
+$border:.1rem solid;
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+nav{
+    background-color: $morado;
+    padding: $radio_pequeno;
+    
+    ul{
+        
+        li{
+            list-style: none;
+            display: inline-block;
+            padding: 0 .3em;
+            &.active{
+                a{
+                   color: $blanco; 
+                   font-weight: bolder;
+                }
+                
+            }
+            a{
+                
+                color: $gris_oscuro;
+            }
+            a:hover{
+                color: $blanco;
+            }
+        }
+    }
+}
+.card{
+    border: $border grey;
+    border-radius: $radio_normal;
+    text-align: center;
+    width: 25%;
+    display: inline-block;
+    padding: .5em;
+    
+    img{
+        width: 100%;
+        border-radius: $radio_grande;
+    }
+    figcaption{
+        margin-bottom: 1em;
+    }
+}
+
