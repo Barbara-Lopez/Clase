@@ -1,8 +1,93 @@
+@use "sass:math";
+
 $rojo:#ff0000;
 $amarillo_claro: rgb(239, 241, 120);
 $verde :rgb(55, 138, 0); 
 $azul :rgb(0, 110, 255);
 $radio_borde :.4rem ;
 $color_sombra:#888;
+
+
+$border-radius: 0.4rem;
+
+$btn-colors: (
+  "error": $rojo,
+  "warning": $amarillo_claro,
+  "accepted": $verde,
+  "normal": $azul
+);
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: math.div($border-radius, 2) math.div($border-radius, 2) $color_sombra;
+  }
+
+  &:active {
+    background-color: orange;
+    color: white;
+  }
+}
+
+@each $k, $v in $btn-colors {
+  .btn-#{$k} {
+    background-color: $v;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
 $gris_oscuro:#888888;
 $gris_claro:#cccccc;
+
+@function colum-color($col-number) {
+  @if ($col-number%2 == 0) {
+    @return $gris_claro;
+  } @else {
+    @return $gris_oscuro;
+  }
+}
+
+@for $num from 1 to 5 {
+  tbody tr td:nth-child(#{$num}) {
+    background-color: colum-color($num);
+  }
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row > * {
+  border: 1px solid black;
+  height: 150px;
+  padding: 1rem;
+}
+
+
+$num_elementos: 8;
+
+@function anchura_col($i) {
+  @return math.div($i, $num_elementos)*100+ "%" ;
+}
+
+@for $i from 1 through $num_elementos {
+.row > .col-#{$i} {
+    width: #{anchura_col($i)};
+  }
+}
